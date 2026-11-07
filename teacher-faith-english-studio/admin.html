@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Dashboard | Teacher Faith English Studio</title><meta name="description" content="Teacher admin dashboard.">
+<meta name="robots" content="noindex"><link rel="stylesheet" href="styles.css"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap bar"><a class="brand" href="index.html"><span>Teacher Faith</span> English Studio</a>
+<nav aria-label="Main"><a href="index.html">Home</a><a href="about.html">About Teacher</a><a href="courses.html">Courses</a><a href="how-it-works.html">How It Works</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a><a href="login.html">Student Portal</a><a class="btn sm" href="free-trial.html">Request a Trial</a></nav></div></header>
+<main id="main"><section class="hero"><div class="wrap"><h1>Admin Dashboard</h1><p class="lead">Teacher only. <a href="dashboard.html" style="color:#e6c65a">Back to parent dashboard</a></p></div></section>
+<section class="wrap sec"><p id="chk">Checking your login...</p>
+<div id="adminwrap" hidden><p id="msg" role="status" aria-live="polite"></p>
+<h2>Parents and students</h2><p id="sum" class="small"></p>
+<label>Search by parent name, email or student name<input id="q" type="search"></label>
+<div id="plist"></div>
+<div class="card" id="editcard" hidden><h3>Edit student</h3><form id="editform"><label>First name<input name="first_name" maxlength="50" required></label>
+<label>Age<input name="age" type="number" min="2" max="99" required></label>
+<label>Preferred course<select name="preferred_course"><option value="not_sure">Not sure yet</option><option value="oxford_phonics_world">Oxford Phonics World</option><option value="family_and_friends">Family and Friends</option><option value="everybody_up">Everybody Up</option><option value="free_conversation">Free Conversation</option></select></label>
+<label>English level<select name="level"><option value="">Not sure</option><option value="beginner">Beginner</option><option value="elementary">Elementary</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></label>
+<button class="btn" type="submit">Save Changes</button> <button class="btn ghost" id="editcancel" type="button">Cancel</button></form></div>
+<h2>Pricing and packages</h2><p class="small">Active packages appear on the public Pricing page. Inactive ones are hidden from the public.</p>
+<div id="pkglist" class="grid"></div>
+<div class="card" id="pkgcard"><h3 id="pkgtitle">Add a package</h3><form id="pkgform">
+<label>Package name<input name="name" maxlength="80" required></label>
+<label>Description (optional)<textarea name="description" rows="2" maxlength="500"></textarea></label>
+<label>Number of lessons (25 minutes each)<input name="lessons" type="number" min="1" max="200" required></label>
+<label>Price<input name="price" type="number" min="0" step="0.01" required></label>
+<label>Original price before discount (optional)<input name="original_price" type="number" min="0" step="0.01"></label>
+<label>Valid for how many days? (optional)<input name="validity_days" type="number" min="1" max="3650"></label>
+<label>Currency code (e.g. CNY, USD, PHP)<input name="currency" maxlength="3" value="CNY" required></label>
+<label>Display order (small numbers show first)<input name="sort_order" type="number" value="0"></label>
+<label class="check"><input type="checkbox" name="active" checked> Show on the public Pricing page</label>
+<button class="btn" id="pkgbtn" type="submit">Add Package</button> <button class="btn ghost" id="pkgcancel" type="button" hidden>Cancel</button></form></div>
+<p><button class="btn" id="logout" type="button">Log Out</button></p></div></section></main>
+<footer><div class="wrap"><p class="brand2">Teacher Faith English Studio</p><p>Learn with confidence. Speak with excellence.</p>
+<p><a href="register.html">Parent Registration</a> · <a href="privacy.html">Privacy</a> · <a href="contact.html">Contact</a> · <a href="free-trial.html">Request a Trial</a></p>
+<p class="small">Oxford Phonics World, Family and Friends and Everybody Up are published course series belonging to their respective owners. Teacher Faith English Studio is an independent tutoring service and is not affiliated with their publishers.</p>
+<p class="small">&copy; <span id="y">2026</span> Teacher Faith English Studio. All rights reserved.</p></div></footer><script src="js/vendor/supabase.js"></script><script src="js/config.js"></script><script src="js/admin.js"></script></body></html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard | Teacher Faith English Studio</title><meta name="description" content="Your parent dashboard.">
+<meta name="robots" content="noindex"><link rel="stylesheet" href="styles.css"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap bar"><a class="brand" href="index.html"><span>Teacher Faith</span> English Studio</a>
+<nav aria-label="Main"><a href="index.html">Home</a><a href="about.html">About Teacher</a><a href="courses.html">Courses</a><a href="how-it-works.html">How It Works</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a><a href="login.html">Student Portal</a><a class="btn sm" href="free-trial.html">Request a Trial</a></nav></div></header>
+<main id="main"><section class="hero"><div class="wrap"><h1>Parent Dashboard</h1><p class="lead">Your private area.</p></div></section>
+<section class="wrap sec"><p id="chk">Checking your login...</p>
+<div id="dash" hidden><h2>Welcome, <span id="who"></span></h2><p id="msg" role="status" aria-live="polite"></p>
+<h2>Announcements</h2><div id="ann"><p>Loading...</p></div>
+<div id="adm" hidden class="card"><p><a class="btn" href="admin.html">Open Admin Dashboard</a></p><h3>Post an announcement (teacher only)</h3><form id="annform"><label>Title<input name="title" maxlength="120" required></label><label>Message<textarea name="body" rows="3" maxlength="2000" required></textarea></label><button class="btn" type="submit">Post</button></form></div>
+<h2>Your students</h2><div id="studs" class="grid"></div>
+<div class="card" id="sfcard"><h3 id="sftitle">Add a student</h3><p class="small">For privacy, please use a first name or nickname only, and avoid sensitive details in the notes. You can add more than one student.</p>
+<form id="studform"><label>Student's name (first name or nickname)<input name="first_name" maxlength="50" required></label>
+<label>Age<input name="age" type="number" min="2" max="99" required></label>
+<label>English level<select name="level"><option value="">Not sure</option><option value="beginner">Beginner</option><option value="elementary">Elementary</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></label>
+<label>Preferred course<select name="preferred_course"><option value="not_sure">Not sure yet</option><option value="oxford_phonics_world">Oxford Phonics World</option><option value="family_and_friends">Family and Friends</option><option value="everybody_up">Everybody Up</option><option value="free_conversation">Free Conversation</option></select></label>
+<label>Learning goals (optional)<textarea name="goals" rows="2" maxlength="500"></textarea></label>
+<label>Preferred schedule (optional)<input name="preferred_schedule" maxlength="200" placeholder="e.g. weekday evenings"></label>
+<label>Additional learning notes (optional)<textarea name="notes" rows="2" maxlength="1000"></textarea></label>
+<button class="btn" id="sfbtn" type="submit">Add Student</button> <button class="btn ghost" id="sfcancel" type="button" hidden>Cancel</button></form></div>
+<p><button class="btn" id="logout" type="button">Log Out</button></p></div></section></main>
+<footer><div class="wrap"><p class="brand2">Teacher Faith English Studio</p><p>Learn with confidence. Speak with excellence.</p>
+<p><a href="register.html">Parent Registration</a> · <a href="privacy.html">Privacy</a> · <a href="contact.html">Contact</a> · <a href="free-trial.html">Request a Trial</a></p>
+<p class="small">Oxford Phonics World, Family and Friends and Everybody Up are published course series belonging to their respective owners. Teacher Faith English Studio is an independent tutoring service and is not affiliated with their publishers.</p>
+<p class="small">&copy; <span id="y">2026</span> Teacher Faith English Studio. All rights reserved.</p></div></footer><script src="js/vendor/supabase.js"></script><script src="js/config.js"></script><script src="js/auth.js"></script><script src="js/dashboard.js"></script></body></html>
